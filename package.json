@@ -1,0 +1,44 @@
+{
+  "name": "react-grouped-data-table",
+  "version": "0.1.0",
+  "description": "Multi-level grouped column headers for react-data-table-component.",
+  "license": "MIT",
+  "author": "YOUR_NAME",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_USERNAME/react-grouped-data-table.git"
+  },
+  "bugs": { "url": "https://github.com/YOUR_USERNAME/react-grouped-data-table/issues" },
+  "homepage": "https://github.com/YOUR_USERNAME/react-grouped-data-table#readme",
+  "keywords": [
+    "react",
+    "data-table",
+    "react-data-table-component",
+    "grouped-columns",
+    "column-groups",
+    "multi-level-header",
+    "table"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.js --format esm,cjs --external react --external react-data-table-component --loader:.js=jsx",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-data-table-component": ">=7",
+    "styled-components": ">=5"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0"
+  }
+}
